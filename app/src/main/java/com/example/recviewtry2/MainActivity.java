@@ -2,6 +2,7 @@ package com.example.recviewtry2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Adapter(this);
         booksRecView = findViewById(R.id.booksRecView);
         booksRecView.setAdapter(adapter);
-        booksRecView.setLayoutManager(new GridLayoutManager(this,2));
+        booksRecView.setLayoutManager(new LinearLayoutManager(this));
 
         ArrayList<Books> books=new ArrayList<>();
         books.add(new Books(1, "1Q84", "Haruki Murakami", 1350, "https://upload.wikimedia.org/wikipedia/en/thumb/5/59/1Q84_%28United_States_edition%29.jpg/220px-1Q84_%28United_States_edition%29.jpg","A work of maddenning brilliance",
